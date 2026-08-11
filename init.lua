@@ -96,6 +96,15 @@ for _, language_server in ipairs(language_servers) do
   vim.lsp.enable(language_server)
 end
 
+-- Dev Container
+require("devcontainer").setup({
+  attach_mounts = {
+    neovim_config = { enabled = true, options = { "readonly" } }
+  },
+  neovim_data = { enabled = false, options = {} },
+  neovim_state = { enabled = false, options = {} }
+})
+
 -- Discord Rich Presence
 require("presence").setup({
     -- General options
