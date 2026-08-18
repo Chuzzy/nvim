@@ -86,7 +86,7 @@ cmp.setup.cmdline(':', {
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local language_servers = {
-  'ts_ls', 'tailwindcss'
+  'ts_ls', 'tailwindcss', 'lua_ls'
 }
 
 for _, language_server in ipairs(language_servers) do
